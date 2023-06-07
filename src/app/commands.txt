@@ -14,3 +14,10 @@ https://youtu.be/UKC_ME6B73E
 
 ng add @angular/material
 
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+https://material.angular.io/guide/theming
+
+
+ng g c components/nav
+
