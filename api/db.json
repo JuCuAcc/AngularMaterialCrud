@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "jashim",
+      "email": "j@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "jashim2",
+      "email": "j2@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "jashim3",
+      "email": "j3@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "jashim4",
+      "email": "j4@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "jashim5",
+      "email": "j5@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "jashim6",
+      "email": "j6@gmail.com"
+    },
+    {
+      "id": 7,
+      "name": "jashim7",
+      "email": "j7@gmail.com"
+    },
+  ]
+}
