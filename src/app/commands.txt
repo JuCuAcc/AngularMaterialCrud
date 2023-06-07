@@ -1,2 +1,8 @@
 npm install -g json-server
 
+npm run api
+
+ng g s services/user
+
+ng g class models/user.model
+
