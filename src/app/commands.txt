@@ -6,3 +6,11 @@ ng g s services/user
 
 ng g class models/user.model
 
+
+https://material.angular.io/
+Angular Material Start 22:02/1:29:06
+https://youtu.be/UKC_ME6B73E
+
+
+ng add @angular/material
+
