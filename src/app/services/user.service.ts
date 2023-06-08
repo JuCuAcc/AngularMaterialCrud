@@ -34,19 +34,8 @@ export class UserService {
            )
 
 
-  //getUsers = (page=1,limit=10) => {
-  //  this.http.get(this.baseUrl + `?_page=${page}&_limit=${limit}`, { observe: 'response' })
-  //    .pipe(
-  //      map(response => {
-  //        const count = parseInt(response.headers.get('X-Total-Count') || "0", 10);
-  //        const users = response.body as UserModel[];
-  //        return { users, count };
-  //      })
-  //    )
-  //}
-
   
-  //// Corrected Method
+  //// Method with return type
   //getUsers = (page = 1, limit = 10): Observable<{ users: UserModel[]; count: number }> => {
   //  return this.http
   //    .get(this.baseUrl + `?_page=${page}&_limit=${limit}`, { observe: 'response' })
