@@ -13,6 +13,7 @@ import { UserService } from 'src/app/services/user.service';
 export class LoadUsersComponent implements OnInit{
 
   dataSource = new MatTableDataSource<UserModel>();
+  
   displayColumns = ['id', 'name', 'email'];
 
   loadUsers() {
@@ -20,7 +21,7 @@ export class LoadUsersComponent implements OnInit{
       next: (response) => {
         this.dataSource.data = response.users;
 
-        console.table(response);
+        console.table(response.users);
 
       },
       error: (err) => console.error(err)
@@ -29,7 +30,6 @@ export class LoadUsersComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadUsers();
-    console.table(this.loadUsers());
   }
 
   constructor( private userService: UserService) {

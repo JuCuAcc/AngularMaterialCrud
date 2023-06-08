@@ -22,6 +22,18 @@ export class UserService {
     }
   }
 
+
+    getUsers=(page=1,limit=10)=>
+           this.http.get(this.baseUrl+`?_page=${page}&_limit=${limit}`,{observe:'response'})
+           .pipe(
+            map(response=> {
+              const count= parseInt(response.headers.get('X-Total-Count')||"0",10);
+              const users= response.body as UserModel[]
+              return {users,count}
+            })
+           )
+
+
   //getUsers = (page=1,limit=10) => {
   //  this.http.get(this.baseUrl + `?_page=${page}&_limit=${limit}`, { observe: 'response' })
   //    .pipe(
@@ -34,18 +46,18 @@ export class UserService {
   //}
 
   
-  // Corrected Method
-  getUsers = (page = 1, limit = 10): Observable<{ users: UserModel[]; count: number }> => {
-    return this.http
-      .get(this.baseUrl + `?_page=${page}&_limit=${limit}`, { observe: 'response' })
-      .pipe(
-        map((response) => {
-          const count = parseInt(response.headers.get('X-Total-Count') || '0', 10);
-          const users = response.body as UserModel[];
-          return { users, count };
-        })
-      );
-  };
+  //// Corrected Method
+  //getUsers = (page = 1, limit = 10): Observable<{ users: UserModel[]; count: number }> => {
+  //  return this.http
+  //    .get(this.baseUrl + `?_page=${page}&_limit=${limit}`, { observe: 'response' })
+  //    .pipe(
+  //      map((response) => {
+  //        const count = parseInt(response.headers.get('X-Total-Count') || '0', 10);
+  //        const users = response.body as UserModel[];
+  //        return { users, count };
+  //      })
+  //    );
+  //};
 
   getById = (id: number) => {
     this.http.get<UserModel>(this.baseUrl + `/${id}`);
