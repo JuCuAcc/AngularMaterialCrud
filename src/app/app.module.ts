@@ -20,6 +20,8 @@ import { LoadUsersComponent } from './components/load-users/load-users.component
 import { AddUpdateUsersComponent } from './components/add-update-users/add-update-users.component';
 
 
+import { MatTableModule } from '@angular/material/table';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +36,7 @@ import { AddUpdateUsersComponent } from './components/add-update-users/add-updat
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatListModule
+    MatListModule, MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

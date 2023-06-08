@@ -9,7 +9,7 @@ const routes: Routes = [
   {path:'users/edit/:id', component:AddUpdateUsersComponent},
   {path:'users', component:LoadUsersComponent},
   {path:'', redirectTo:'/users', pathMatch:'full'},
-  {path:'**', component:NotfoundComponent},
+  {path:'**', component:NotfoundComponent}
 
 
 ];
