@@ -15,12 +15,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 
 import { MatListModule } from '@angular/material/list';
+import { NotfoundComponent } from './components/notfound/notfound.component';
+import { LoadUsersComponent } from './components/load-users/load-users.component';
+import { AddUpdateUsersComponent } from './components/add-update-users/add-update-users.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent
+    NavComponent,
+    NotfoundComponent,
+    LoadUsersComponent,
+    AddUpdateUsersComponent
   ],
   imports: [
     BrowserModule,
