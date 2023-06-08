@@ -19,6 +19,9 @@ export class LoadUsersComponent implements OnInit{
     this.userService.getUsers().subscribe({
       next: (response) => {
         this.dataSource.data = response.users;
+
+        console.table(response);
+
       },
       error: (err) => console.error(err)
     })
@@ -26,6 +29,7 @@ export class LoadUsersComponent implements OnInit{
 
   ngOnInit(): void {
     this.loadUsers();
+    console.table(this.loadUsers());
   }
 
   constructor( private userService: UserService) {

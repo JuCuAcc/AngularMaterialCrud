@@ -10,6 +10,8 @@ import { UserModel } from '../models/user.model';
 })
 export class UserService {
 
+  //baseUrl = "/api/users"; //users
+
   baseUrl = "/api/users"; //users
 
   addUser = (user: UserModel) => {
