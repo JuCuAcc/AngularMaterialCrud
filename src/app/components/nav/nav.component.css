@@ -13,3 +13,11 @@
     padding: 2rem;
 
 }
+
+.sidenav-item{
+    flex-direction: row;
+}
+
+.sidenav-item .mat-icon {
+    vertical-align: middle;
+}

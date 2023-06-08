@@ -11,11 +11,30 @@
   <mat-sidenav-container class="example-container" autosize>
     <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true">
       <mat-nav-list>
-        <a class="sidenav-item" mat-list-item [routerLink] ="'/'"></a>
-        <mat-icon>home</mat-icon>
-        <span> Home</span>
+        <a class="sidenav-item" mat-list-item [routerLink]="'/'">
+          <mat-icon>home</mat-icon>
+          <span> Home</span>
+        </a>
+        <a class="sidenav-item" mat-list-item [routerLink]="'/users'">
+          <mat-icon>group</mat-icon>
+          <span> Users</span>
+        </a>
+        <a class="sidenav-item" mat-list-item [routerLink]="'/users/add'">
+          <mat-icon>person add</mat-icon>
+          <span> Add User</span>
+        </a>
       </mat-nav-list>
     </mat-sidenav>
+
+
+    <div class="example-sidenav-content">
+      <div style="width: 100%;">
+
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+
   </mat-sidenav-container>
 
 
