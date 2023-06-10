@@ -41,6 +41,7 @@ export class LoadUsersComponent implements OnInit{
   changePage(event: PageEvent) {
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
+    this.loadUsers();
   }
   constructor( private userService: UserService) {
 
