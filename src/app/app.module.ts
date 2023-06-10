@@ -19,6 +19,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { LoadUsersComponent } from './components/load-users/load-users.component';
 import { AddUpdateUsersComponent } from './components/add-update-users/add-update-users.component';
 
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { MatTableModule } from '@angular/material/table';
 
@@ -36,7 +37,7 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatListModule, MatTableModule
+    MatListModule, MatTableModule, MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
