@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { Observable } from 'rxjs'; // to fix error
-import { map } from 'rxjs';
+//import { Observable } from 'rxjs'; // to fix error
+import { map, Observable } from 'rxjs';
 import { UserModel } from '../models/user.model';
 
 @Injectable({
@@ -53,10 +53,13 @@ export class UserService {
   }
 
 
-  delete = (id: number) => {
-    this.http.delete<any>(this.baseUrl + `${id}`);
-  }
+  //delete = (id: number) => {
+  //  this.http.delete<any>(this.baseUrl + `${id}`);
+  //}
 
+  delete(id: number): Observable<any> {
+    return this.http.delete<any>(this.baseUrl + `/${id}`); // Carefull about '/'
+  }
 
   constructor(private http:HttpClient) { }
 }
