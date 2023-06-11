@@ -31,7 +31,8 @@ ng g c components/add-update-users
 Restart and Wait: Sometimes all things are OK but not works.
 
 
-56:25/1:29:06
-
 
 ng s -o
+
+
+Functionality of Edit and Delete Button
