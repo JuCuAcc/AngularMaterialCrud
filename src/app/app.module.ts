@@ -20,6 +20,7 @@ import { LoadUsersComponent } from './components/load-users/load-users.component
 import { AddUpdateUsersComponent } from './components/add-update-users/add-update-users.component';
 
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 
 import { MatTableModule } from '@angular/material/table';
 
@@ -37,7 +38,7 @@ import { MatTableModule } from '@angular/material/table';
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule, MatToolbarModule, MatSidenavModule, MatIconModule,
-    MatListModule, MatTableModule, MatPaginatorModule
+    MatListModule, MatTableModule, MatPaginatorModule, MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
