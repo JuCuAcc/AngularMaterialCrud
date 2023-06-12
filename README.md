@@ -2,7 +2,11 @@
 
 
 # Screenshot
-<video src="Screenshots/ng.webm" controls autoplay width: 100%;></video>
+
+<video width="100%" height="100%" controls>
+  <source src="Screenshots/ng.webm" type="video/webm">
+</video>
+
 <img src="Screenshots/Screenshot (493).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
 <br/>
 <img src="Screenshots/Screenshot (494).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
