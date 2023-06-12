@@ -3,7 +3,7 @@
 
 # Screenshot
 
-<video width="100%" height="100%" controls>
+<video width="720" height="480" controls>
   <source src="Screenshots/ng.webm" type="video/webm">
 </video>
 
