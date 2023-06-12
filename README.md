@@ -3,9 +3,6 @@
 
 # Screenshot
 
-<video width="720" height="480" controls>
-  <source src="Screenshots/ng.webm" type="video/webm">
-</video>
 
 <img src="Screenshots/Screenshot (493).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
 <br/>
