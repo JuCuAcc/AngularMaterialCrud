@@ -1,5 +1,32 @@
 # AngularMaterialCrud
 
+
+# Screenshot
+<video src="Screenshots/ng.webm" controls autoplay width: 100%;></video>
+<img src="Screenshots/Screenshot (493).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (494).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (495).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (496).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (497).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (498).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (499).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (500).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/Screenshot (501).png" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+<img src="Screenshots/ng-partial.gif" alt="Jashim's Material UI" style="height: 100%; width:100%;"/>
+<br/>
+
+
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
 
 ## Development server
