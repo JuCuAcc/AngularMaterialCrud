@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { MyErrorStateMatcher } from '../../models/MyErrorStateMatch';
@@ -14,6 +14,8 @@ export class AddUpdateUsersComponent implements OnInit{
 
   frm!: FormGroup;
   action = "Add";
+  @ViewChild("userForm") usrForm!: NgForm; // It will be used for resetting the form validation messages
+
   get f() {
     return this.frm.controls;
   }
@@ -22,7 +24,7 @@ export class AddUpdateUsersComponent implements OnInit{
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private userService: UserService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
-    //this.getUserById();
+    this.getUserById();
     this.frm = this.fb.group({
       id: [0],
       name: ['', Validators.required],
@@ -31,8 +33,38 @@ export class AddUpdateUsersComponent implements OnInit{
   }
 
 
-  onPost():void {
+  // Fetching the user by Id from the database
+  // Method modified in User Service
 
+  getUserById = () => {
+    const id = this.route.snapshot.params['id'];
+    if (id) {
+      this.action = "Update";
+      this.userService.getById(id).subscribe({
+        next: (user => this.frm.patchValue(user)),
+        error:(err)=>console.log(err)
+      })
+    }
+  }
+
+
+
+  onPost():void {
+    this.userService.addUser(this.frm.value).subscribe({
+      next: (data) => {
+        this.usrForm.reset();
+        this.usrForm.resetForm();
+        this.snackBar.open("success", 'close', {
+          duration:3000
+        })
+      },
+      error: (err) => {
+        console.log(err);
+        this.snackBar.open("error", 'close', {
+          duration:3000
+        })
+      }
+    })
   }
 
 

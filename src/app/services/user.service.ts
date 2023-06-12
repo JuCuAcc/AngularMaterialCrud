@@ -48,9 +48,14 @@ export class UserService {
   //    );
   //};
 
-  getById = (id: number) => {
-    this.http.get<UserModel>(this.baseUrl + `/${id}`);
+  getById = (id: number): Observable<any> => {
+    return this.http.get<UserModel>(this.baseUrl + `/${id}`);
   }
+
+
+  //getById = (id: number) => {
+  //  this.http.get<UserModel>(this.baseUrl + `/${id}`);
+  //}
 
 
   //delete = (id: number) => {
