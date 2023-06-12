@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
+import { MyErrorStateMatcher } from '../../models/MyErrorStateMatch';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -12,6 +13,12 @@ import { UserService } from '../../services/user.service';
 export class AddUpdateUsersComponent implements OnInit{
 
   frm!: FormGroup;
+  action = "Add";
+  get f() {
+    return this.frm.controls;
+  }
+
+  errorMatcher = new MyErrorStateMatcher();
   constructor(private fb: FormBuilder, private route: ActivatedRoute, private userService: UserService, private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
@@ -22,4 +29,11 @@ export class AddUpdateUsersComponent implements OnInit{
       email: ['', [Validators.required, Validators.email]]
     })
   }
+
+
+  onPost():void {
+
+  }
+
+
 }
